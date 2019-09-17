@@ -1,0 +1,212 @@
+/* 全局样式和布局 */
+*{
+  box-sizing: border-box;
+  transition: background 200ms;
+  /* 给所有背景颜色的变化一个缓冲 1s是1000ms */
+  /* background: rgba(0, 0, 0, .1); */
+}
+body{
+  font-size: 14px;
+  color:#444;
+  background:#f9f9f9;
+  line-height: 1.7;
+}
+/* 给容器限定宽度并居中 */
+.container{
+  /* 一般指定类名为container的都是block，如p、div */
+  display:block;
+  max-width:1080px;
+  margin: 0 auto;
+}
+a{
+  text-decoration: none;
+}
+img{
+  display: block;
+  /* 设置一个尺寸限定，使它最大不超过它的母元素的大小 */
+  max-width: 100%;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float:right;
+}
+/* 清除浮动 */
+.clear-float:after,
+.cleat-float:before{
+  content:"";
+  display: block;
+  clear:both;
+}
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9{
+  /* 简单的栅格布局 */
+  display:block;
+  position:relative;
+  min-height: 1px;
+  /* 确保它是有高度的 */
+  float: left;
+}
+.col-1{
+  width:10%;
+}
+.col-2{
+  width:20%;
+}
+.col-3{
+  width:30%;
+}
+.col-4{
+  width:40%;
+}
+.col-5{
+  width:50%;
+}
+.col-6{
+  width:60%;
+}
+.col-7{
+  width:70%;
+}
+.col-8{
+  width:80%;
+}
+.col-9{
+  width:90%;
+}
+/* 细节样式 */
+.top-nav{
+  background:#eee;
+}
+.top-nav .item{
+  padding:6px 10px;
+  display: inline-block;
+  color: #666;
+}
+.top-nav .item:hover{
+  color: #333;
+}
+.header{
+  padding: 20px 0;
+}
+.header .logo{
+  font-size: 32px;
+}
+.header .search-bar{
+ border:2px solid #dd182b;
+ /* 这里如果不设置背景颜色当放大缩小页面是，按钮旁边会有留白 */
+ background-color:#dd182b;
+}
+.header .search-bar input,
+.header .search-bar button{
+  display: block;
+  float: left;
+  border:0;
+  padding:10px;
+  /* 去掉点击输入框发蓝的边 */
+  outline: 0;
+}
+.header .search-bar input:focus{
+  
+  box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.3);
+  /* 阴影是向内的，水平位移，垂直位移，2px的羽化，2px的扩充，颜色 */
+}
+.header .search-bar input{
+  width: 80%;
+}
+.header .search-bar button{
+  background-color: #dd182b;
+  color: #fff;
+  width: 20%;
+}
+.header .search-bar button:hover{
+  background:#ce1829;
+}
+.header .cart{
+  text-align:center;
+  color:#dd182b;
+}
+.header .cart a{
+ 
+  float:right;
+  padding:10px;
+  background:#fff;
+  border:2px solid #eee;
+  /* 占母元素的80% */
+  width:80%;
+}
+.main-promote{
+  background: #dedede;
+}
+.main-promote .cat{
+  background:#6e6568; 
+  color: #fff;
+}
+.main-promote .cat .item{
+  padding:14px 20px;
+}
+.main-promote .cat .item:hover{
+  background: rgba(0, 0, 0, 0.2);
+}
+.main-promote .info{
+  padding:10px;
+  /* line-height: 50px; */
+  background:#fff;
+  color: #777;
+  box-shadow: 0 1px 2px rgba(0, 0,0,.1);
+}
+.main-promote .info > *{
+  margin-bottom: 10px;
+}
+.main-promote .info .avatar{
+  width: 50px;
+  /* 输入w50可快速生成 */
+  height: 50px;
+  background: #aaa;
+  border-radius: 50%;
+  float:left;
+  margin-right:10px;
+ 
+}
+.cat-promote .title:before{
+  content:"";
+  display:inline-block;
+  vertical-align: middle;
+  width: 5px;
+  height: 25px;
+  background: #dd182b;
+  margin-right: 10px;
+}
+.cat-promote .title{
+  font-size: 22px;
+}
+.cat-promote .item{
+  /* height: 300px; */
+  /* background-color: #ccc; */
+  padding: 5px;
+}
+/* 因为item没有颜色且有一个5px的padding所以每个灰格之间会有空隙 */
+.cat-promote .card{
+  height: 300px;
+  background: #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px rgba(0, 0,0,.1);
+}
+.footer{
+  text-align: center;
+  color: #999;
+  background: #eee;
+  margin-top: 30px;
+  padding: 30px 0;
+}
+.footer a{
+  color: #999;
+}
